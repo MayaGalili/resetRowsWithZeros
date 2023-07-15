@@ -12,6 +12,7 @@ import numpy as np
 
 
 def reset_rows_with_zeros(input_matrix):
+    print("INPUT MATRIX:", input_matrix)
     mat_sz = len(input_matrix)
     v1 = np.sum(input_matrix, axis=1)
     v2 = np.sum(input_matrix, axis=0)
@@ -23,5 +24,5 @@ def reset_rows_with_zeros(input_matrix):
         if v2[i] < mat_sz:
             input_matrix[:, i] = 0
 
-    print('RESULTS', input_matrix)
+    print('RESULTS MATRIX:', input_matrix)
     return input_matrix
